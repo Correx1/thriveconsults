@@ -32,10 +32,10 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-auto">
-          <a href="#discovery" className="btn btn-primary w-auto">
+          <a href="/contact" className="btn btn-primary w-auto">
             Book a Free Discovery Session
           </a>
-          <a href="#whatsapp" className="btn btn-secondary w-auto flex gap-2">
+          <a href="https://wa.me/2347032681154?text=Hello%2C%20I%20visited%20the%20Thrive%20Consults%20website%20and%20I%20would%20like%20to%20enquire%20about%20your%20services." className="btn btn-secondary w-auto flex gap-2">
             <FaWhatsapp className="w-5 h-5" />
             Chat on WhatsApp
           </a>

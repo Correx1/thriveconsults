@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FiLinkedin, FiInstagram, FiFacebook, FiTwitter, FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 
 const Footer = () => {
@@ -18,11 +19,11 @@ const Footer = () => {
           <div className="lg:col-span-4 flex flex-col">
             {/* Logo */}
             <Link href="/" className="mb-6 group cursor-pointer inline-block">
-              <img src="/thrive-logo-white.png" alt="Thrive Consults" className="h-20 w-auto object-contain" />
+            <Image src="/thrive-logo-white.png" alt="Thrive Consults" width={200} height={64} className="h-16 w-auto object-contain" />
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
-              We don't just advise, we build. Partnering with Nigerian businesses to create scalable systems and deliver measurable results.
+              We don&apos;t just advise, we build. Partnering with Nigerian businesses to create scalable systems and deliver measurable results.
             </p>
 
             <ul className="space-y-3 mb-6">

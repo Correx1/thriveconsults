@@ -55,7 +55,7 @@ const CoreValues = () => {
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="relative z-10 flex flex-col items-start text-left group">
+                <div key={index} className="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left group">
                   
                   {/* Faint Background Number */}
                   <div className="absolute -top-8 -left-2 text-[80px] font-black text-white/[0.03] select-none pointer-events-none transition-colors duration-500 group-hover:text-teal-dark/[0.05]">

@@ -97,7 +97,7 @@ const Testimonials = () => {
 
                   {/* Quote text */}
                   <p className="text-gray-600 text-sm md:text-base italic leading-relaxed mb-6">
-                    "{t.quote}"
+                    &ldquo;{t.quote}&rdquo;
                   </p>
 
                   {/* Divider */}

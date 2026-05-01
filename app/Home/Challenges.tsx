@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FiLock, FiUsers, FiDollarSign, FiEyeOff, FiAlertTriangle, FiActivity } from 'react-icons/fi';
 
@@ -56,9 +57,9 @@ const Challenges = () => {
             <p className="text-gray-600 text-lg mb-10">
               If you recognise yourself in three or more of these scenarios, Thrive Consults was built specifically for you.
             </p>
-            <a href="#fix" className="btn btn-primary px-8 py-3 text-lg hidden lg:inline-flex shadow-lg shadow-teal-dark/20">
+            <Link href="/beep-diagnostic" className="btn btn-primary px-8 py-3 text-lg hidden lg:inline-flex shadow-lg shadow-teal-dark/20">
               Find My Fix →
-            </a>
+            </Link>
           </div>
 
           {/* Right Column: Grid of items */}
@@ -89,9 +90,9 @@ const Challenges = () => {
             
             {/* Mobile CTA */}
             <div className="mt-16 text-center lg:hidden">
-              <a href="#fix" className="btn btn-primary px-8 py-3 text-lg w-auto shadow-lg shadow-teal-dark/20">
+              <Link href="/beep-diagnostic" className="btn btn-primary px-8 py-3 text-lg w-auto shadow-lg shadow-teal-dark/20">
                 Find My Fix →
-              </a>
+              </Link>
             </div>
           </div>
 

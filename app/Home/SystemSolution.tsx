@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaExclamationCircle } from 'react-icons/fa';
 
@@ -24,12 +25,12 @@ const SystemSolution = () => {
             </h2>
             
             <p className="text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
-              That ceiling you've hit? That chaos when you step away? <strong className="text-white font-medium">That is not a business problem. That is a systems problem.</strong> And it has a solution.
+              That ceiling you&apos;ve hit? That chaos when you step away? <strong className="text-white font-medium">That is not a business problem. That is a systems problem.</strong> And it has a solution.
             </p>
 
-            <a href="#bottlenecks" className="btn btn-primary px-8 py-3 text-sm font-bold shadow-lg shadow-teal-dark/20">
+            <Link href="/beep-diagnostic" className="btn btn-primary px-8 py-3 text-sm font-bold shadow-lg shadow-teal-dark/20">
               SHOW ME WHAT IS HOLDING MY BUSINESS BACK
-            </a>
+            </Link>
           </div>
 
           {/* Right Side: Symptoms Card (Glassmorphism) */}
@@ -49,7 +50,7 @@ const SystemSolution = () => {
               <li className="flex items-start gap-3">
                 <div className="mt-1 w-1.5 h-1.5 rounded-full bg-teal-dark shrink-0"></div>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Revenue looks good on paper, but you don't really know if you're making the profit you thought.
+                  Revenue looks good on paper, but you don&apos;t really know if you&apos;re making the profit you thought.
                 </p>
               </li>
               <li className="flex items-start gap-3">

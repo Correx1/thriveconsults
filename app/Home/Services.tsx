@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { FiUsers, FiClipboard, FiSettings, FiTrendingUp, FiStar, FiMonitor } from 'react-icons/fi';
 
 const servicesData = [
@@ -7,42 +8,48 @@ const servicesData = [
     title: "Strategic HR",
     icon: FiUsers,
     description: "We help you hire better people and keep them. Recruitment, performance systems, and the people infrastructure that runs without you.",
-    linkText: "Learn About HR Systems"
+    linkText: "Learn About HR Systems",
+    href: "/services/strategic-hr"
   },
   {
     id: 2,
     title: "Business Diagnostics",
     icon: FiClipboard,
     description: "Before we prescribe, we diagnose. Our business audit gives you a clear, honest picture of exactly where the real problem is.",
-    linkText: "Learn About Diagnostics"
+    linkText: "Learn About Diagnostics",
+    href: "/services/business-diagnostics"
   },
   {
     id: 3,
     title: "Operational Systems",
     icon: FiSettings,
     description: "We document how your business works so it runs without you. SOPs, workflows, automation, and custom ERP development.",
-    linkText: "Learn About Operations"
+    linkText: "Learn About Operations",
+    href: "/services/operational-systems"
   },
   {
     id: 4,
     title: "Marketing and Sales",
     icon: FiTrendingUp,
     description: "We build the sales and marketing systems that generate predictable revenue without depending on the founder to close every deal.",
-    linkText: "Learn About Sales Systems"
+    linkText: "Learn About Sales Systems",
+    href: "/services/marketing-and-sales"
   },
   {
     id: 5,
     title: "Customer Service Systems",
     icon: FiStar,
     description: "Acquiring a customer is expensive. Losing one is more expensive. We build the systems that keep customers coming back.",
-    linkText: "Learn About Customer Systems"
+    linkText: "Learn About Customer Systems",
+    href: "/services/customer-service-systems"
   },
   {
     id: 6,
     title: "Digital Business Strategy",
     icon: FiMonitor,
     description: "Visibility without strategy is noise. We build a digital presence that is intentional and commercially productive.",
-    linkText: "Learn About Digital Strategy"
+    linkText: "Learn About Digital Strategy",
+    href: "/services/digital-business-strategy"
   }
 ];
 
@@ -81,18 +88,18 @@ const Services = () => {
                   {service.description}
                 </p>
                 
-                <a href={`#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center text-teal-dark font-semibold hover:text-deep-navy transition-colors text-sm group-hover:translate-x-1 duration-300">
+                <Link href={service.href} className="inline-flex items-center text-teal-dark font-semibold hover:text-deep-navy transition-colors text-sm group-hover:translate-x-1 duration-300">
                   {service.linkText} <span className="ml-2">→</span>
-                </a>
+                </Link>
               </div>
             );
           })}
         </div>
 
         <div className="mt-16 text-center">
-          <a href="#services" className="btn btn-primary px-10 py-4 text-sm font-bold tracking-wide">
+          <Link href="/services" className="btn btn-primary px-10 py-4 text-sm font-bold tracking-wide">
             SEE ALL SERVICES
-          </a>
+          </Link>
         </div>
 
       </div>

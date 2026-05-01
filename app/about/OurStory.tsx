@@ -43,7 +43,7 @@ const OurStory = () => {
             </h2>
             
             <p className="text-gray-500 text-base md:text-lg mb-10 leading-relaxed">
-              Most businesses don't fail from lack of effort. <br className="hidden md:block" />
+              Most businesses don&apos;t fail from lack of effort. <br className="hidden md:block" />
               They stall because they <span className="text-teal-dark font-medium">lack systems.</span>
             </p>
 
@@ -95,13 +95,13 @@ const OurStory = () => {
           <div className="flex flex-col items-center justify-center my-12">
             <FaQuoteLeft className="text-teal-dark/30 text-4xl mb-4" />
             <p className="text-deep-navy text-lg md:text-xl font-medium leading-relaxed italic max-w-3xl">
-              "Show me a good business and I will show you strong people running it. Show me a great business and I will show you scalable systems powering it. We build those systems."
+              &quot;Show me a good business and I will show you strong people running it. Show me a great business and I will show you scalable systems powering it. We build those systems.&quot;
             </p>
           </div>
 
           {/* Button */}
           <div className="mt-8">
-            <Link href="#discovery" className="btn btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-sm shadow-sm shadow-teal-dark/20 w-auto">
+            <Link href="/contact" className="btn btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-sm shadow-sm shadow-teal-dark/20 w-auto">
               BOOK A FREE STRATEGY SESSION <FiArrowRight className="w-4 h-4" />
             </Link>
           </div>

@@ -1,4 +1,8 @@
 import ServiceHero from './ServiceHero';
+import ServiceList from './ServiceList';
+import ServiceDiagnostic from './ServiceDiagnostic';
+import ServiceCTA from './ServiceCTA';
+import DiagnosticCTA from '../Home/DiagnosticCTA';
 
 export const metadata = {
   title: 'Our Services | Thrive Consult',
@@ -9,6 +13,9 @@ export default function Services() {
   return (
     <main>
       <ServiceHero />
+      <ServiceList />
+    <DiagnosticCTA/>
+      <ServiceCTA />
     </main>
   );
 }

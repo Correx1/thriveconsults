@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const DiagnosticCTA = () => {
@@ -28,9 +29,9 @@ const DiagnosticCTA = () => {
 
           {/* Right Column (col-6 equivalent) */}
           <div className="lg:w-2/5 flex items-center justify-center lg:justify-end w-full">
-            <a href="#diagnostic" className="btn btn-primary w-auto px-10 py-4 text-sm md:text-base font-bold tracking-wide shadow-lg shadow-teal-dark/30 hover:-translate-y-1 transition-all duration-300 text-center whitespace-nowrap">
+            <Link href="/beep-diagnostic" className="btn btn-primary w-auto px-10 py-4 text-sm md:text-base font-bold tracking-wide shadow-lg shadow-teal-dark/30 hover:-translate-y-1 transition-all duration-300 text-center whitespace-nowrap">
               TAKE THE FREE DIAGNOSTIC
-            </a>
+            </Link>
           </div>
 
         </div>

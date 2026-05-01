@@ -53,7 +53,7 @@ const AboutFrameworks = () => {
             Our Proprietary Frameworks
           </h2>
           <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mt-4">
-            We don't guess. We use tested, repeatable systems to diagnose problems and build scalable solutions.
+            We don&apos;t guess. We use tested, repeatable systems to diagnose problems and build scalable solutions.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ const AboutFrameworks = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Link href="#diagnostic" className="btn btn-primary inline-flex items-center justify-center gap-2 px-10 py-4 text-sm shadow-md shadow-teal-dark/20 w-auto">
+          <Link href="/beep-diagnostic" className="btn btn-primary inline-flex items-center justify-center gap-2 px-10 py-4 text-sm shadow-md shadow-teal-dark/20 w-auto">
             TAKE THE FREE B.E.E.P. DIAGNOSTIC <FiArrowRight className="w-4 h-4" />
           </Link>
         </div>

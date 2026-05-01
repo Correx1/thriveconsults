@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -24,12 +25,12 @@ const navData = [
     megaMenu: {
       type: 'split',
       leftItems: [
-        { title: 'Strategic HR', desc: 'Hire right. Manage fairly. Build a team that stays.', icon: FiUsers, href: '#' },
-        { title: 'Business Diagnostics', desc: 'Find the real problem before you spend on solutions.', icon: FiClipboard, href: '#' },
-        { title: 'Operational Systems', desc: 'Build a business that runs without you. Includes custom ERP.', icon: FiSettings, href: '#' },
-        { title: 'Marketing and Sales', desc: 'Generate predictable revenue with a system, not luck.', icon: FiTrendingUp, href: '#' },
-        { title: 'Customer Service Systems', desc: 'Keep the customers you worked hard to win.', icon: FiHeadphones, href: '#' },
-        { title: 'Digital Business Strategy', desc: 'Visibility with purpose. Digital presence that converts.', icon: FiMonitor, href: '#' }
+        { title: 'Strategic HR', desc: 'Hire right. Manage fairly. Build a team that stays.', icon: FiUsers, href: '/services/strategic-hr' },
+        { title: 'Business Diagnostics', desc: 'Find the real problem before you spend on solutions.', icon: FiClipboard, href: '/services/business-diagnostics' },
+        { title: 'Operational Systems', desc: 'Build a business that runs without you. Includes custom ERP.', icon: FiSettings, href: '/services/operational-systems' },
+        { title: 'Marketing and Sales', desc: 'Generate predictable revenue with a system, not luck.', icon: FiTrendingUp, href: '/services/marketing-and-sales' },
+        { title: 'Customer Service Systems', desc: 'Keep the customers you worked hard to win.', icon: FiHeadphones, href: '/services/customer-service-systems' },
+        { title: 'Digital Business Strategy', desc: 'Visibility with purpose. Digital presence that converts.', icon: FiMonitor, href: '/services/digital-business-strategy' }
       ],
       rightPanel: {
         title: 'Not Sure Where to Start?',
@@ -47,10 +48,10 @@ const navData = [
     megaMenu: {
       type: 'split',
       leftItems: [
-        { title: 'Traders and Importers', desc: 'Systems and structure for market traders and importers.', icon: FiShoppingBag, href: '#' },
-        { title: 'Real Estate', desc: 'Sales pipelines and marketing systems for property companies.', icon: FiHome, href: '#' },
-        { title: 'Manufacturing', desc: 'Operational control and ERP for Nigerian manufacturers.', icon: FiSettings, href: '#' },
-        { title: 'Supermarkets and Retail', desc: 'Customer experience and inventory systems for retail.', icon: FiShoppingCart, href: '#' }
+        { title: 'Traders and Importers', desc: 'Systems and structure for market traders and importers.', icon: FiShoppingBag, href: '/industries/traders' },
+        { title: 'Real Estate', desc: 'Sales pipelines and marketing systems for property companies.', icon: FiHome, href: '/industries/real-estate' },
+        { title: 'Manufacturing', desc: 'Operational control and ERP for Nigerian manufacturers.', icon: FiSettings, href: '/industries/manufacturing' },
+        { title: 'Supermarkets and Retail', desc: 'Customer experience and inventory systems for retail.', icon: FiShoppingCart, href: '/industries/supermarkets' }
       ],
       rightPanel: {
         title: 'We Know Your Industry.',
@@ -100,6 +101,10 @@ const navData = [
         }
       ]
     }
+  },
+  {
+    name: 'CONTACT',
+    href: '/contact'
   }
 ];
 
@@ -141,7 +146,7 @@ const Navbar = () => {
               <div key={item.name} className="group">
                 {item.megaMenu ? (
                   <>
-                    <Link href={item.href} className="flex items-center gap-2 text-white text-sm font-bold tracking-wider hover:text-teal-dark transition-colors py-4 drop-shadow-sm cursor-pointer h-full">
+                    <Link href={item.href} className="flex items-center gap-2 text-white text-sm font-medium tracking-wider hover:text-teal-dark transition-colors py-4 drop-shadow-sm cursor-pointer h-full">
                       {item.name} <FiChevronDown className="text-[10px] group-hover:rotate-180 transition-transform duration-300" />
                     </Link>
 
@@ -160,7 +165,7 @@ const Navbar = () => {
                                       <Icon className="text-xl" />
                                     </div>
                                     <div>
-                                      <h5 className="font-bold text-deep-navy text-[15px] mb-2 group-hover/item:text-teal-dark transition-colors">{link.title}</h5>
+                                      <h5 className="font-medium text-deep-navy text-[15px] mb-2 group-hover/item:text-teal-dark transition-colors">{link.title}</h5>
                                       <p className="text-gray-500 text-sm leading-relaxed">{link.desc}</p>
                                     </div>
                                   </Link>
@@ -199,7 +204,7 @@ const Navbar = () => {
                                 <ul className="space-y-4">
                                   {col.links.map((link: any, j: number) => (
                                     <li key={j}>
-                                      <Link href={link.href} className="flex items-center gap-3 text-gray-700 text-[15px] hover:text-teal-dark hover:translate-x-1 transition-all font-semibold">
+                                      <Link href={link.href} className="flex items-center gap-3 text-gray-700 text-[15px] hover:text-teal-dark hover:translate-x-1 transition-all font-normal">
                                         <span className="text-teal-dark/50 text-sm">→</span> {link.name}
                                       </Link>
                                     </li>
@@ -213,7 +218,7 @@ const Navbar = () => {
                     )}
                   </>
                 ) : (
-                  <Link href={item.href} className="flex items-center text-white text-sm font-bold tracking-wider hover:text-teal-dark transition-colors py-4 drop-shadow-sm h-full">
+                  <Link href={item.href} className="flex items-center text-white text-sm font-medium tracking-wider hover:text-teal-dark transition-colors py-4 drop-shadow-sm h-full">
                     {item.name}
                   </Link>
                 )}
@@ -223,7 +228,7 @@ const Navbar = () => {
 
           {/* CTA Button Desktop */}
           <div className="hidden lg:block relative z-50">
-            <Link href="#contact" className="btn btn-primary px-8 py-3 text-xs font-bold tracking-widest shadow-xl shadow-teal-dark/30 hover:shadow-teal-dark/50">
+            <Link href="/contact" className="btn btn-primary px-8 py-3 text-xs font-bold tracking-widest shadow-xl shadow-teal-dark/30 hover:shadow-teal-dark/50">
               BOOK A SESSION
             </Link>
           </div>
@@ -246,7 +251,7 @@ const Navbar = () => {
             <div key={item.name} className="border-b border-white/10 pb-4">
               {item.megaMenu ? (
                 <>
-                  <div className="flex justify-between items-center w-full text-white text-xl font-black tracking-widest">
+                  <div className="flex justify-between items-center w-full text-white text-sm font-medium tracking-wide">
                     <Link href={item.href} onClick={() => setMobileMenuOpen(false)}>
                       {item.name}
                     </Link>
@@ -259,7 +264,7 @@ const Navbar = () => {
                     {item.megaMenu.type === 'split' && (
                       <div className="pl-4 space-y-5 text-gray-300">
                         {item.megaMenu.leftItems?.map((link: any) => (
-                          <Link key={link.title} href={link.href} className="block font-semibold hover:text-teal-dark transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                          <Link key={link.title} href={link.href} className="block text-sm font-normal text-gray-300 hover:text-teal-dark transition-colors" onClick={() => setMobileMenuOpen(false)}>
                             {link.title}
                           </Link>
                         ))}
@@ -274,7 +279,7 @@ const Navbar = () => {
                             <ul className="space-y-4">
                               {col.links.map((link: any) => (
                                 <li key={link.name}>
-                                  <Link href={link.href} className="block font-semibold hover:text-teal-dark transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                  <Link href={link.href} className="block text-sm font-normal text-gray-300 hover:text-teal-dark transition-colors" onClick={() => setMobileMenuOpen(false)}>
                                     {link.name}
                                   </Link>
                                 </li>
@@ -288,14 +293,14 @@ const Navbar = () => {
                   </div>
                 </>
               ) : (
-                <Link href={item.href} className="text-white text-xl font-black tracking-widest block" onClick={() => setMobileMenuOpen(false)}>
+                <Link href={item.href} className="text-white text-sm font-medium tracking-wide block" onClick={() => setMobileMenuOpen(false)}>
                   {item.name}
                 </Link>
               )}
             </div>
           ))}
 
-          <Link href="#contact" className="btn btn-primary w-full text-center py-5 mt-6 text-sm tracking-widest" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/contact" className="btn btn-primary w-full text-center py-5 mt-6 text-sm tracking-widest" onClick={() => setMobileMenuOpen(false)}>
             BOOK A SESSION
           </Link>
         </div>
