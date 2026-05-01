@@ -85,7 +85,7 @@ const Services = () => (
             <p className="text-gray-500 text-sm md:text-base leading-relaxed flex-grow">{s.desc}</p>
             <div className="border-t border-gray-100 pt-5 flex items-center justify-between">
               <span className="text-teal-dark font-bold text-sm">{s.price}</span>
-              <Link href="/contact" className="text-deep-navy text-xs font-bold uppercase tracking-wider border-b border-deep-navy/20 hover:text-teal-dark hover:border-teal-dark transition-colors pb-0.5">
+              <Link href="#contact" className="text-deep-navy text-xs font-bold uppercase tracking-wider border-b border-deep-navy/20 hover:text-teal-dark hover:border-teal-dark transition-colors pb-0.5">
                 {s.cta}
               </Link>
             </div>
@@ -118,10 +118,10 @@ const ApprenticeshipSection = () => (
             <p>But a growing business needs more than loyal apprentices. It needs structure around them. Clear roles. Simple systems. A path for the best ones to grow.</p>
             <p className="font-semibold text-deep-navy">That is the gap we fill — without disrupting the relationship between Oga and apprentice. Just adding the structure that makes it work better for everyone.</p>
           </div>
-          <Link href="/contact" className="inline-block mt-8 text-teal-dark text-xs font-bold tracking-wider uppercase border-b border-teal-dark/30 hover:border-teal-dark transition-colors pb-0.5">
+          <Link href="#contact" className="inline-block mt-8 text-teal-dark text-xs font-bold tracking-wider uppercase border-b border-teal-dark/30 hover:border-teal-dark transition-colors pb-0.5">
             Tell Me More About the Apprenticeship System
           </Link>
-        </div>
+        </div> 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:pt-16">
           {features.map((f, i) => (
             <div key={i} className="bg-white border border-gray-200 p-6">
@@ -208,10 +208,10 @@ const CTA = () => (
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-start lg:justify-end gap-4">
-          <a href="https://wa.me/2347032681154?text=Hello%2C%20I%20visited%20the%20Thrive%20Consults%20website%20and%20I%20would%20like%20to%20enquire%20about%20your%20services." className="w-auto px-6 py-4 bg-teal-dark text-white text-xs font-bold tracking-wider rounded hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-dark/30 transition-all duration-300 flex items-center justify-center gap-2 uppercase">
+          <a href="https://wa.me/" className="w-auto px-6 py-4 bg-teal-dark text-white text-xs font-bold tracking-wider rounded hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-dark/30 transition-all duration-300 flex items-center justify-center gap-2 uppercase">
             <FaWhatsapp className="text-lg" /> WhatsApp Us Now
           </a>
-          <a href="/contact" className="w-auto px-6 py-4 bg-transparent border border-white/30 text-white text-xs font-bold tracking-wider rounded hover:bg-white/5 hover:border-white transition-all duration-300 text-center uppercase">
+          <a href="#contact" className="w-auto px-6 py-4 bg-transparent border border-white/30 text-white text-xs font-bold tracking-wider rounded hover:bg-white/5 hover:border-white transition-all duration-300 text-center uppercase">
             Book a Free Session
           </a>
         </div>
