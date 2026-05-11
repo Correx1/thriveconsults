@@ -1,4 +1,5 @@
 import React from 'react';
+import BeepQuiz from './BeepQuiz';
 
 // ─── HERO ───────────────────────────────────────────────────────
 const Hero = () => (
@@ -42,7 +43,7 @@ const pillars = [
 ];
 
 const WhatIsBEEP = () => (
-  <section className="py-24 bg-white">
+  <section className="py-16 bg-white">
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
@@ -90,6 +91,9 @@ export default function BeepDiagnosticPage() {
     <main>
       <Hero />
       <WhatIsBEEP />
+      <section id="quiz-section" className="bg-gray-50 border-t border-gray-100 py-6 md:py-8">
+        <BeepQuiz />
+      </section>
     </main>
   );
 }
