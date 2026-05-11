@@ -8,16 +8,28 @@ export const metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <main className="pt-32 pb-24 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-16">
-          <h1 className="text-3xl md:text-5xl font-bold text-deep-navy mb-4">Privacy Policy</h1>
-          <p className="text-lg text-gray-600 mb-8 pb-8 border-b border-gray-100">
-            How Thrive Consults collects, uses, and protects your personal information.<br/>
-            <span className="text-sm font-medium mt-2 inline-block">Last Updated: {new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}</span>
+    <main className="bg-white">
+      
+      {/* Hero Section */}
+      <section className="bg-deep-navy pt-40 pb-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-dark/10 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Privacy Policy</h1>
+          <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl">
+            How Thrive Consults collects, uses, and protects your personal information.
+          </p>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          
+          <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-12 pb-8 border-b border-gray-100">
+            Last Updated: {new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}
           </p>
 
-          <div className="space-y-12 text-gray-600">
+          <div className="space-y-12 text-gray-600 text-lg">
             {/* Sections */}
             <section>
               <h2 className="text-2xl font-bold text-deep-navy mb-4">Who We Are</h2>
@@ -135,15 +147,15 @@ export default function PrivacyPolicy() {
               </div>
             </section>
 
-            <div className="pt-12 text-center">
-               <Link href="/contact" className="inline-block bg-deep-navy text-white font-bold py-4 px-8 rounded-full hover:bg-opacity-90 transition-all shadow-md">
+            <div className="pt-16 mt-16 border-t border-gray-100 text-center">
+               <Link href="/contact" className="inline-block bg-deep-navy text-white font-bold py-4 px-10 rounded-md hover:bg-opacity-90 transition-all shadow-md">
                  Questions about your data? Contact us.
                </Link>
             </div>
 
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
