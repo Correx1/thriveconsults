@@ -3,6 +3,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FiLinkedin, FiInstagram, FiFacebook, FiTwitter, FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 
+const aboutLinks = [
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Coaching', href: '#' },
+  { name: 'Industries', href: '/industries' },
+];
+
+const serviceLinks = [
+  { name: 'Strategic HR', href: '/services/strategic-hr' },
+  { name: 'Business Diagnostics', href: '/services/business-diagnostics' },
+  { name: 'Operational Systems', href: '/services/operational-systems' },
+  { name: 'Marketing and Sales', href: '/services/marketing-and-sales' },
+  { name: 'Customer Service', href: '/services/customer-service-systems' },
+  { name: 'Digital Strategy', href: '/services/digital-business-strategy' },
+];
+
+const industryLinks = [
+  { name: 'Traders and Importers', href: '/industries/traders' },
+  { name: 'Real Estate', href: '/industries/real-estate' },
+  { name: 'Manufacturing', href: '/industries/manufacturing' },
+  { name: 'Supermarkets and Retail', href: '/industries/supermarkets' },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-[#0d0d2b] text-white pt-16 pb-8 relative overflow-hidden">
@@ -56,10 +79,10 @@ const Footer = () => {
               <span className="absolute -bottom-2 left-0 w-1/2 h-[2px] bg-teal-dark"></span>
             </h4>
             <ul className="space-y-3">
-              {['About', 'Our Story', 'Case Studies', 'Frameworks'].map((link) => (
-                <li key={link}>
-                  <Link href="#" className="text-gray-400 text-sm hover:text-teal-dark hover:translate-x-1 inline-block transition-all duration-300">
-                    {link}
+              {aboutLinks.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-400 text-sm hover:text-teal-dark hover:translate-x-1 inline-block transition-all duration-300">
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -73,17 +96,10 @@ const Footer = () => {
               <span className="absolute -bottom-2 left-0 w-1/2 h-[2px] bg-teal-dark"></span>
             </h4>
             <ul className="space-y-3">
-              {[
-                'Strategic HR', 
-                'Business Diagnostics', 
-                'Operational Systems', 
-                'Marketing and Sales', 
-                'Customer Service', 
-                'Digital Strategy'
-              ].map((link) => (
-                <li key={link}>
-                  <Link href="#" className="text-gray-400 text-sm hover:text-teal-dark hover:translate-x-1 inline-block transition-all duration-300">
-                    {link}
+              {serviceLinks.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-400 text-sm hover:text-teal-dark hover:translate-x-1 inline-block transition-all duration-300">
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -97,15 +113,10 @@ const Footer = () => {
               <span className="absolute -bottom-2 left-0 w-1/2 h-[2px] bg-teal-dark"></span>
             </h4>
             <ul className="space-y-3">
-              {[
-                'Traders and Importers', 
-                'Real Estate', 
-                'Manufacturing', 
-                'Supermarkets and Retail'
-              ].map((link) => (
-                <li key={link}>
-                  <Link href="#" className="text-gray-400 text-sm hover:text-teal-dark hover:translate-x-1 inline-block transition-all duration-300">
-                    {link}
+              {industryLinks.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-gray-400 text-sm hover:text-teal-dark hover:translate-x-1 inline-block transition-all duration-300">
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -117,26 +128,26 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-gray-500 text-xs text-center md:text-left">
-            <p>© {new Date().getFullYear()} Thrive Empire Ltd. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} Thriveconsults. All Rights Reserved.</p>
           </div>
           
-          <div className="flex items-center gap-4 text-xs text-gray-500">
-            <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
-            <span>/</span>
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs text-gray-500">
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Use</Link>
+            <span className="hidden sm:inline">/</span>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
           </div>
 
           <div className="flex gap-4">
-            <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
+            <a href="https://www.linkedin.com/company/thriveconsults" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
               <FiLinkedin className="text-xs" />
             </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
+            <a href="https://www.instagram.com/thriveconsults" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
               <FiInstagram className="text-xs" />
             </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
+            <a href="https://web.facebook.com/ThriveConsults/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
               <FiFacebook className="text-xs" />
             </a>
-            <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
+            <a href="https://x.com/thriveconsults" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-teal-dark hover:text-white transition-all duration-300">
               <FiTwitter className="text-xs" />
             </a>
           </div>
