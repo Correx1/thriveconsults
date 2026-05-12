@@ -67,13 +67,15 @@ const OurStory = () => {
 
           {/* RIGHT COLUMN - Image Container */}
           <div className="pt-6 lg:pt-0 h-full w-full">
-            <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden shadow-[0_8px_30px_-12px_rgba(0,0,0,0.1)] border border-gray-100 bg-gray-50 flex items-center justify-center">
-              <Image 
-                src="/systems-growth.png" 
-                alt="Business Systems and Growth" 
-                fill
-                className="object-cover object-center"
+            <div className="relative w-full h-full min-h-[480px] rounded-2xl overflow-hidden shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop" 
+                alt="Business consultancy session at Thrive Consults" 
+                className="w-full h-full object-cover object-center"
               />
+              {/* Subtle overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/20 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
 
