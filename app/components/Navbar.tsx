@@ -82,7 +82,8 @@ const navData = [
           title: 'SHOP',
           desc: 'Courses, coaching, and digital tools at every price point.',
           links: [
-            { name: 'Coaching Programmes', href: '#' },
+            { name: 'Coaching Overview', href: '/coaching' },
+            { name: 'Programme Details', href: '/coaching/programme' },
             { name: 'Online Courses', href: '#' },
             { name: 'Books and Digital Assets', href: '#' },
             { name: 'View All Products', href: '#' }
